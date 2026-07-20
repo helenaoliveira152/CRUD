@@ -98,3 +98,19 @@ console.log(situacao(media));
         }
         alert(texto);
 }
+
+        function removerAluno(){
+            let nome = prompt("Digite o nome do aluno: ")
+
+            let alunoo = buscarAlunos(nome);
+
+            if(aluno === undefined){
+                alert("Aluno não encontrado! ");
+                return;
+
+            }
+
+            let posicao = alunos.indexOf(aluno);
+            alunos.splice(posicao, 1);
+            alert("Aluno removido com sucesso! ");
+        }
