@@ -114,3 +114,19 @@ console.log(situacao(media));
             alunos.splice(posicao, 1);
             alert("Aluno removido com sucesso! ");
         }
+
+
+        function lancarNota(){
+            let nome = prompt('Digite o  nome do aluno: ');
+
+            let aluno = buscarAlunos(nome);
+
+                if(aluno === undefined){
+                    alert("Aluno não encontrado! ");
+                    return;
+                }
+
+                alunos.nota.push(nota);
+
+                alert("Nota lançada com sucesso! ");
+        }
