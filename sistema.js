@@ -282,3 +282,47 @@ console.log(situacao(media));
     } while (opcao !== 0);
 
 }
+
+
+    function menuPrincipal() {
+
+    let opcao;
+
+    do {
+
+        opcao = Number(prompt(
+            "MENU PRINCIPAL\n\n" +
+            "1 - Cadastro\n" +
+            "2 - Notas\n" +
+            "3 - Relatórios\n" +
+            "0 - Sair"
+        ));
+
+        switch (opcao) {
+
+            case 1:
+                submenuCadastro();
+                break;
+
+            case 2:
+                submenuNotas();
+                break;
+
+            case 3:
+                submenuRelatorios();
+                break;
+
+            case 0:
+                alert("Programa encerrado!");
+                break;
+
+            default:
+                alert("Opção inválida!");
+
+        }
+
+    } while (opcao !== 0);
+
+}
+
+        menuPrincipal();
