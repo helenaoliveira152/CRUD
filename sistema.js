@@ -181,3 +181,104 @@ console.log(situacao(media));
 
     alert("Média geral da turma: " + mediaGeral.toFixed(2));
 }
+
+        function listarAprovados() {
+
+        let texto = "";
+        let encontrou = false;
+
+        for (let i = 0; i < alunos.length; i++) {
+
+            let media = calcularMedia(alunos[i]);
+
+        if (situacao(media) === "APROVADO") {
+            texto += alunos[i].nome + " - Média: " + media.toFixed(2) + "\n";
+            encontrou = true;
+        }
+
+    }
+
+        if (encontrou) {
+            alert(texto);
+        } else {
+            alert("Ainda não há alunos aprovados.");
+        }
+
+    }
+
+
+    function submenuCadastro() {
+
+    let opcao;
+
+       do {
+
+        opcao = Number(prompt(
+            "MENU CADASTRO\n\n" +
+            "1 - Cadastrar aluno\n" +
+            "2 - Listar alunos\n" +
+            "3 - Remover aluno\n" +
+            "0 - Voltar"
+        ));
+
+        switch (opcao) {
+
+            case 1:
+                cadastrarAluno();
+                break;
+
+            case 2:
+                listarAlunos();
+                break;
+
+            case 3:
+                removerAluno();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                alert("Opção inválida!");
+
+        }
+
+    } while (opcao !== 0);
+
+    }
+
+
+      function submenuNotas() {
+
+        let opcao;
+
+        do {
+
+        opcao = Number(prompt(
+            "MENU NOTAS\n\n" +
+            "1 - Lançar nota\n" +
+            "2 - Ver boletim do aluno\n" +
+            "0 - Voltar"
+        ));
+
+        switch (opcao) {
+
+            case 1:
+                lancarNota();
+                break;
+
+            case 2:
+                verBoletim();
+                break;
+
+            case 0:
+                break;
+
+            default:
+                alert("Opção inválida!");
+
+        }
+
+    } while (opcao !== 0);
+
+}
