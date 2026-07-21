@@ -125,8 +125,39 @@ console.log(situacao(media));
                     alert("Aluno não encontrado! ");
                     return;
                 }
+            
+                 let nota = Number(prompt("Digite a nota:"));
 
-                alunos.nota.push(nota);
+                if (nota < 0 || nota > 10) {
+                 alert("Nota inválida.");
+                return;
+             }
 
-                alert("Nota lançada com sucesso! ");
+        aluno.notas.push(nota);
+
+        alert("Nota lançada com sucesso!");
+    }
+
+
+        function verBoletim(){
+            let nome = prompt("Digite nome do aluno: ")
+
+            let aluno = buscarAlunos(nome);
+
+            if(aluno === undefined){
+                alert("Aluno não encontrado! ")
+                return;
+            }
+
+              let media = calcularMedia(aluno);
+              let resultado = situacao(media);
+
+            alert(
+                "Nome: " + aluno.nome +
+                "\nNotas: " + aluno.notas.join(", ") +
+                "\nMédia: " + media.toFixed(2) +
+                "\nSituação: " + resultado
+            );
         }
+
+        
