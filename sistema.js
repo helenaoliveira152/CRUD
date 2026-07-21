@@ -160,4 +160,24 @@ console.log(situacao(media));
             );
         }
 
-        
+        function totalDeAlunos(){
+            alert("Total de alunos: " + alunos.length);
+        }
+
+        function mediaGeralDaTurma() {
+
+         if (alunos.length === 0) {
+        alert("Nenhum aluno cadastrado.");
+        return;
+    }
+
+    let soma = 0;
+
+            for (let i = 0; i < alunos.length; i++) {
+             soma += calcularMedia(alunos[i]);
+    }
+
+    let mediaGeral = soma / alunos.length;
+
+    alert("Média geral da turma: " + mediaGeral.toFixed(2));
+}
