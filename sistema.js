@@ -326,3 +326,4 @@ console.log(situacao(media));
 }
 
         menuPrincipal();
+        
